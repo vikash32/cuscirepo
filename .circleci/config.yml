@@ -18,6 +18,7 @@ jobs:
           command: |
             echo $GCLOUD_SERVICE_KEY > ${HOME}/gcloud-service-key.json
             gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
+            SHORT_HASH=$(echo $CIRCLE_SHA1 | cut -c -7)
             cat ${HOME}/gcloud-service-key.json
             gcloud auth configure-docker --quiet 
             echo ${SHORT_HASH}
