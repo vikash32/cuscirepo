@@ -1,1 +1,22 @@
-
+version: 2.1
+jobs:
+  build:
+    working_directory: ~/test_dir
+    docker:
+      - image: circleci/node:7
+    steps:
+      - checkout
+      - run:
+          name: The First Step
+          command: |
+            echo 'Hello World!'
+            echo 'This is the integration pipeline'
+            sudo npm install nodemon@latest -g
+            npm install
+            pwd
+            ls
+      - run:
+          name: Code Has Arrived
+          command: |
+            ls -al
+            echo '^^^That should look familiar^^^'
