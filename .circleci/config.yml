@@ -37,6 +37,7 @@ jobs:
           command: |
             SHORT_HASH=$(echo $CIRCLE_SHA1 | cut -c -7)
             sed -i "s/IMAGE_TAG/${SHORT_HASH}/" ${HOME}/project/manifest/application.yaml
+            sed -i "s/GCLOUD_PROJECT_ID/${GCLOUD_PROJECT_ID}/" ${HOME}/project/manifest/application.yaml
             cat ${HOME}/project/manifest/application.yaml
             kubectl apply -f ${HOME}/project/manifest/application.yaml
 
