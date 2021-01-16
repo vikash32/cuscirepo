@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  buildingimage:
+  build:
     docker:
       - image: google/cloud-sdk
     steps:       
