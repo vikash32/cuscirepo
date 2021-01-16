@@ -34,7 +34,9 @@ jobs:
       - run: 
           name: adding deployenment
           command: |
-            SHORT_HASH=$(echo $CIRCLE_SHA1 | cut -c -7)  
+            SHORT_HASH=$(echo $CIRCLE_SHA1 | cut -c -7)
+            sed -i "s/IMAGE_TAG/${SHORT_HASH}/" ${HOME}/project/manifest/application.yaml
+            cat ${HOME}/project/manifest/application.yaml
             ls -l
             pwd
 
