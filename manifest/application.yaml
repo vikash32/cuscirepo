@@ -24,7 +24,7 @@ kind: Service
 metadata:
   labels:
     app: frontend
-  name: frontend=svc
+  name: frontend
 spec:
   ports:
   - name: http
