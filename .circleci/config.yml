@@ -20,8 +20,8 @@ jobs:
 #           command: |
 #             ls -al
 #             echo '^^^That should look familiar^^^'
-  buildingImage:
-    docker:       
+  buildingimage:
+    steps:       
       - checkout             
       - setup_remote_docker
       - run: 
