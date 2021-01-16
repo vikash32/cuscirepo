@@ -30,7 +30,7 @@ jobs:
           command: |
             echo $GCLOUD_SERVICE_KEY > ${HOME}/gcloud-service-key.json
             gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
-            gcloud container clusters get-credentials my-first-cluster-1 --zone us-central1-c --project $GCLOUD_PROJECT_ID
+            gcloud container clusters get-credentials test-custer --zone us-central1-c --project $GLCOUD_PROJECT_ID
       - checkout             
       - run: 
           name: adding deployenment
