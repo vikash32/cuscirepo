@@ -38,4 +38,11 @@ jobs:
             sed -i "s/IMAGE_TAG/${SHORT_HASH}/" ${HOME}/manifest/application.yaml
             cat ${HOME}/manifest/application.yaml
   
-            
+workflows:
+  version: 2
+  build_deploy_and_finalize:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
