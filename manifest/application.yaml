@@ -33,4 +33,4 @@ spec:
     targetPort: http
   selector:
     app: frontend
-  type: ClusterIP
+  type: NodePort
