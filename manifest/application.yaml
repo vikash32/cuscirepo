@@ -16,7 +16,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - image: asia.gcr.io/${GCLOUD_PROJECT_ID}/frontend:IMAGE_TAG
+      - image: asia.gcr.io/GCLOUD_PROJECT_ID/frontend:IMAGE_TAG
         name: frontend
 ---
 apiVersion: v1
