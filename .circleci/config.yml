@@ -21,6 +21,8 @@ jobs:
 #             ls -al
 #             echo '^^^That should look familiar^^^'
   buildingimage:
+    docker:
+      - image: google/cloud-sdk
     steps:       
       - checkout             
       - setup_remote_docker
