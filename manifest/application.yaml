@@ -42,7 +42,7 @@ spec:
   selector:
     app: customer-microservice
   type: ClusterIP
-  ---
+---
 apiVersion: networking.gke.io/v1beta1
 kind: ManagedCertificate
 metadata:
